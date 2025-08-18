@@ -22,10 +22,6 @@ const About: React.FC = () => {
               alt="Financial consulting team"
               className="rounded-2xl shadow-2xl"
             />
-            <div className="absolute -bottom-8 -right-8 bg-[#ff3131] text-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl font-bold">15+</div>
-              <div className="text-sm">Years of Excellence</div>
-            </div>
           </div>
 
           <div className="space-y-12">
@@ -55,17 +51,6 @@ const About: React.FC = () => {
               <p className="text-gray-100 leading-relaxed">
                 Empowering SMEs through cutting-edge financial intelligence, transforming data into prosperity.
               </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <div className="text-3xl font-bold text-[#11166c] mb-2">500+</div>
-                <div className="text-gray-600">Happy Clients</div>
-              </div>
-              <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <div className="text-3xl font-bold text-[#ff3131] mb-2">98%</div>
-                <div className="text-gray-600">Success Rate</div>
-              </div>
             </div>
           </div>
         </div>

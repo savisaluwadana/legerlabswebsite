@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Clock, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Globe } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -80,7 +80,6 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff3131] focus:border-transparent transition-colors"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ff3131] focus:border-transparent transition-all duration-300 hover:border-gray-400"
                     placeholder="Your full name"
                   />
@@ -194,27 +193,6 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-[#11166c] to-[#141414] rounded-2xl p-8 text-white">
-              <div className="flex items-center mb-4">
-                <Clock className="w-6 h-6 text-[#ff3131] mr-3" />
-                <h4 className="text-xl font-bold">Business Hours</h4>
-              </div>
-              <div className="space-y-2 text-gray-200">
-                <div className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
-                </div>
               </div>
             </div>
 

@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Design Tokens - Original Theme */
+:root {
+  --primary-blue: #11166c;
+  --accent-red: #ff3131;
+  --background-white: #FFFFFF;
+  --muted-service-color: #5B7AB8;
+  --error-red: #FF0000;
+  --success-green: #10B981;
+  --text-primary: #11166c;
+  --text-muted: #6B7280;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background-white);
+  color: var(--text-primary);
+}
+
+/* Accent highlighting */
+.accent {
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+.text-service-meta {
+  color: var(--muted-service-color);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.required-asterisk {
+  color: var(--error-red);
+  margin-left: 2px;
+}
+
 /* Custom animations */
 @keyframes fade-in-up {
   from {
@@ -75,10 +110,109 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff3131;
+  background: var(--accent-red);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #e62929;
+}
+
+/* Form notifications */
+.form-notification {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.form-notification.success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.form-notification.error {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #dc2626;
+}
+
+/* Brand styles */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand:hover {
+  color: var(--primary-blue);
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0.75rem;
+}
+
+/* Button styles - Original Theme */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-red), #e62929);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #e62929, #d42626);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(255, 49, 49, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-blue);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent-red), #e62929);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-accent:hover {
+  background: linear-gradient(135deg, #e62929, #d42626);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(255, 49, 49, 0.3);
 }
