@@ -34,10 +34,12 @@ const Values: React.FC = () => {
     <section id="values" className="py-20 bg-gradient-to-br from-[#11166c] to-[#141414]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#ff3131] mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our <span className="text-[#ff3131]">Values</span>
           </h2>
-        
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            The principles that guide everything we do and define who we are as a company.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
