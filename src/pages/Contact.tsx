@@ -120,20 +120,20 @@ const Contact: React.FC = () => {
     <>
       <Helmet>
         <title>Get In Touch - Contact Ledgerlabs</title>
-        <meta name="description" content="Contact Ledgerlabs for expert financial services. Schedule a free consultation or get in touch with our team for personalized solutions." />
+        <meta name="description" content="Contact Ledgerlabs for expert financial services. Schedule a consultation or get in touch with our team for personalized solutions." />
         <meta name="keywords" content="contact ledgerlabs, financial consultation, get in touch, schedule meeting" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
-        <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <section className="pt-24 pb-12 bg-white/10 backdrop-blur-lg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-[var(--primary-blue)] mb-6">
-                Get In <span className="accent">Touch</span>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Get In <span className="text-[#ff3131]">Touch</span>
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Ready to take your business to the next level? Contact us today for a <span className="accent">free consultation</span> 
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                Ready to take your business to the next level? Contact us today for a <span className="text-[#ff3131]">consultation</span> 
                 and discover how Ledgerlabs can transform your financial operations.
               </p>
             </div>
@@ -144,8 +144,8 @@ const Contact: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-gray-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-[var(--primary-blue)] mb-6">Send us a message</h3>
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
                 
                 {/* Notification */}
                 {notification.type && (
@@ -162,8 +162,8 @@ const Contact: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-[var(--primary-blue)] mb-2">
-                        Individual / Company name <span className="required-asterisk">*</span>
+                      <label className="block text-sm font-medium text-white mb-2">
+                        Individual / Company name <span className="text-[#ff3131]">*</span>
                       </label>
                       <input
                         type="text"
@@ -171,13 +171,13 @@ const Contact: React.FC = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 hover:border-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-[#ff3131] focus:border-transparent transition-all duration-300 text-white placeholder-gray-300 hover:border-white/30"
                         placeholder="Your name or company name"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[var(--primary-blue)] mb-2">
-                        Email Address <span className="required-asterisk">*</span>
+                      <label className="block text-sm font-medium text-white mb-2">
+                        Email Address <span className="text-[#ff3131]">*</span>
                       </label>
                       <input
                         type="email"
@@ -185,7 +185,7 @@ const Contact: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 hover:border-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-[#ff3131] focus:border-transparent transition-all duration-300 text-white placeholder-gray-300 hover:border-white/30"
                         placeholder="hello@example.com"
                       />
                     </div>
@@ -193,7 +193,7 @@ const Contact: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-[var(--primary-blue)] mb-2">
+                      <label className="block text-sm font-medium text-white mb-2">
                         Company Name
                       </label>
                       <input
@@ -201,12 +201,12 @@ const Contact: React.FC = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 hover:border-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-[#ff3131] focus:border-transparent transition-all duration-300 text-white placeholder-gray-300 hover:border-white/30"
                         placeholder="Your company (optional)"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[var(--primary-blue)] mb-2">
+                      <label className="block text-sm font-medium text-white mb-2">
                         Phone Number
                       </label>
                       <input
@@ -214,37 +214,37 @@ const Contact: React.FC = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 hover:border-gray-400"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-[#ff3131] focus:border-transparent transition-all duration-300 text-white placeholder-gray-300 hover:border-white/30"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[var(--primary-blue)] mb-2">
+                    <label className="block text-sm font-medium text-white mb-2">
                       Service Interest
                     </label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 hover:border-gray-400 text-service-meta"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-[#ff3131] focus:border-transparent transition-all duration-300 text-white hover:border-white/30"
                     >
-                      <option value="" className="text-service-meta">Select a service</option>
-                      <option value="data-analytics">Data Analytics & Dashboards</option>
-                      <option value="bookkeeping">Bookkeeping & Accounting</option>
-                      <option value="tax-compliance">Tax Compliance & Planning</option>
-                      <option value="business-consulting">Business Consulting</option>
-                      <option value="financial-planning">Financial Planning</option>
-                      <option value="market-research">Market Research</option>
-                      <option value="internal-audits">Internal Audits</option>
-                      <option value="company-services">Company Services</option>
+                      <option value="" className="bg-slate-800 text-white">Select a service</option>
+                      <option value="data-analytics" className="bg-slate-800 text-white">Data Analytics & Dashboards</option>
+                      <option value="bookkeeping" className="bg-slate-800 text-white">Bookkeeping & Accounting</option>
+                      <option value="tax-compliance" className="bg-slate-800 text-white">Tax Compliance & Planning</option>
+                      <option value="business-consulting" className="bg-slate-800 text-white">Business Consulting</option>
+                      <option value="financial-planning" className="bg-slate-800 text-white">Financial Planning</option>
+                      <option value="market-research" className="bg-slate-800 text-white">Market Research</option>
+                      <option value="internal-audits" className="bg-slate-800 text-white">Internal Audits</option>
+                      <option value="company-services" className="bg-slate-800 text-white">Company Services</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[var(--primary-blue)] mb-2">
-                      Message <span className="required-asterisk">*</span>
+                    <label className="block text-sm font-medium text-white mb-2">
+                      Message <span className="text-[#ff3131]">*</span>
                     </label>
                     <textarea
                       name="message"
@@ -252,7 +252,7 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-blue)] focus:border-transparent transition-all duration-300 resize-none hover:border-gray-400"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-[#ff3131] focus:border-transparent transition-all duration-300 resize-none text-white placeholder-gray-300 hover:border-white/30"
                       placeholder="Tell us about your business needs and how we can help..."
                     ></textarea>
                   </div>
@@ -260,7 +260,7 @@ const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[var(--primary-blue)] to-blue-600 text-white px-6 py-4 rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-gradient-to-r from-[#ff3131] to-[#e62929] text-white px-6 py-4 rounded-lg font-semibold text-lg hover:from-[#e62929] hover:to-[#d12121] transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-[#ff3131]/50 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isSubmitting ? (
                       <>
@@ -280,38 +280,38 @@ const Contact: React.FC = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-[var(--primary-blue)] mb-6">Contact Information</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
                   <div className="space-y-6">
                     {contactInfo.map((info, index) => (
-                      <div 
-                        key={index} 
-                        className="flex items-start space-x-4 cursor-pointer hover:bg-gray-50 p-4 rounded-lg transition-colors"
+                      <div
+                        key={index}
+                        className="flex items-start space-x-4 cursor-pointer hover:bg-white/10 p-4 rounded-lg transition-colors border border-white/20"
                         onClick={info.action}
                       >
-                        <div className="w-12 h-12 bg-[var(--primary-blue)] rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 bg-[#ff3131] rounded-lg flex items-center justify-center flex-shrink-0">
                           <info.icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-[var(--primary-blue)] mb-1">{info.title}</h4>
-                          <p className="text-gray-900 font-medium">{info.details}</p>
-                          <p className="text-service-meta">{info.description}</p>
+                          <h4 className="font-semibold text-white mb-1">{info.title}</h4>
+                          <p className="text-gray-200 font-medium">{info.details}</p>
+                          <p className="text-gray-300">{info.description}</p>
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="bg-gray-50 rounded-2xl p-8">
-                  <h4 className="text-xl font-bold text-[var(--primary-blue)] mb-4">
-                    <span className="accent">Free</span> Consultation
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <h4 className="text-xl font-bold text-white mb-4">
+                    <span className="text-[#ff3131]">Consultation</span>
                   </h4>
-                  <p className="text-gray-600 mb-6">
-                    Schedule a complimentary 30-minute consultation to discuss your business needs 
+                  <p className="text-gray-200 mb-6">
+                    Schedule a 30-minute consultation to discuss your business needs
                     and discover how our solutions can help you achieve your financial goals.
                   </p>
-                  <button 
+                  <button
                     onClick={scheduleWhatsApp}
-                    className="w-full bg-[var(--accent-red)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors duration-300 flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-[#ff3131] to-[#e62929] text-white px-6 py-3 rounded-lg font-semibold hover:from-[#e62929] hover:to-[#d12121] transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-[#ff3131]/50"
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Schedule via WhatsApp

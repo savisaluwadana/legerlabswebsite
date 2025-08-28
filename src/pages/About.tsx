@@ -103,56 +103,76 @@ const About: React.FC = () => {
         </section>
 
         {/* Our Story */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 right-20 w-64 h-64 bg-[#ff3131]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 left-20 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[var(--primary-blue)] mb-6">
-                Our <span className="accent">Story</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our <span className="text-[#ff3131]">Story</span>
               </h2>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Founded with the vision of democratizing <span className="accent">financial intelligence</span> for SMEs, 
-                  Ledgerlabs emerged from the recognition that small and medium-sized businesses needed access to 
-                  the same sophisticated financial tools and insights that larger corporations enjoy.
-                </p>
-                
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Our journey began when our founders, experienced financial professionals and data scientists, 
-                  witnessed countless SMEs struggling with complex financial data and inefficient bookkeeping processes. 
-                  They realized that with the right technology and expertise, these challenges could be transformed into 
-                  <span className="accent"> competitive advantages</span>.
-                </p>
-                
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Today, we continue to innovate and expand our services, always keeping our core mission at heart: 
-                  to make advanced financial analytics and professional bookkeeping services accessible, 
-                  affordable, and actionable for businesses of all sizes.
-                </p>
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <p className="text-lg text-gray-200 leading-relaxed mb-6">
+                    Founded with the vision of democratizing <span className="text-[#ff3131] font-semibold">financial intelligence</span> for SMEs, 
+                    Ledgerlabs emerged from the recognition that small and medium-sized businesses needed access to 
+                    the same sophisticated financial tools and insights that larger corporations enjoy.
+                  </p>
+                  
+                  <p className="text-lg text-gray-200 leading-relaxed mb-6">
+                    Our journey began when our founders, experienced financial professionals and data scientists, 
+                    witnessed countless SMEs struggling with complex financial data and inefficient bookkeeping processes. 
+                    They realized that with the right technology and expertise, these challenges could be transformed into 
+                    <span className="text-[#ff3131] font-semibold">competitive advantages</span>.
+                  </p>
+                  
+                  <p className="text-lg text-gray-200 leading-relaxed">
+                    Today, we continue to innovate and expand our services, always keeping our core mission at heart: 
+                    to make advanced financial analytics and professional bookkeeping services accessible, 
+                    affordable, and actionable for businesses of all sizes.
+                  </p>
+                </div>
               </div>
               
               <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#ff3131]/20 to-blue-500/20 rounded-2xl blur-2xl transform rotate-6"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Data analytics and financial planning workspace"
-                  className="rounded-2xl shadow-xl w-full h-auto"
+                  className="rounded-2xl shadow-2xl w-full h-auto relative z-10"
                   loading="lazy"
                 />
+                <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-[#ff3131] to-[#e62929] text-white p-6 rounded-xl shadow-xl z-20">
+                  <div className="text-2xl font-bold">Founded 2019</div>
+                  <div className="text-sm opacity-90">Pioneering Financial Intelligence</div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Our Values */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-[#ff3131]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[var(--primary-blue)] mb-6">
-                Our <span className="accent">Values</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our <span className="text-[#ff3131]">Values</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 The principles that guide everything we do and define who we are as a company.
               </p>
             </div>
@@ -192,17 +212,17 @@ const About: React.FC = () => {
               ].map((value, index) => (
                 <div 
                   key={index}
-                  className="group bg-white rounded-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                  className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-white/20 shadow-2xl hover:shadow-[#ff3131]/20"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-[var(--primary-blue)] to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#ff3131] to-[#e62929] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-[var(--primary-blue)] mb-4 group-hover:text-[var(--accent-red)] transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#ff3131] transition-colors duration-300">
                     {value.title}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-200 leading-relaxed group-hover:text-white transition-colors duration-300">
                     {value.description}
                   </p>
                 </div>
@@ -212,34 +232,40 @@ const About: React.FC = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 relative overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-16 left-16 w-56 h-56 bg-[#ff3131]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-16 right-16 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[var(--primary-blue)] mb-6">
-                Meet Our <span className="accent">Expert Team</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Meet Our <span className="text-[#ff3131]">Expert Team</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our certified professionals bring years of experience in financial consulting, 
                 data analytics, and business strategy.
               </p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-                <div className="text-3xl font-bold text-[var(--primary-blue)] mb-2">50+</div>
-                <div className="text-service-meta">Happy Clients</div>
+              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-4xl font-bold text-[#ff3131] mb-3 group-hover:scale-110 transition-transform duration-300">50+</div>
+                <div className="text-gray-200 font-medium">Happy Clients</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-                <div className="text-3xl font-bold text-[var(--accent-red)] mb-2">98%</div>
-                <div className="text-service-meta">Client Satisfaction</div>
+              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-4xl font-bold text-[#ff3131] mb-3 group-hover:scale-110 transition-transform duration-300">98%</div>
+                <div className="text-gray-200 font-medium">Client Satisfaction</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-                <div className="text-3xl font-bold text-[var(--primary-blue)] mb-2">24/7</div>
-                <div className="text-service-meta">Support Available</div>
+              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-4xl font-bold text-[#ff3131] mb-3 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                <div className="text-gray-200 font-medium">Support Available</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-                <div className="text-3xl font-bold text-[var(--accent-red)] mb-2">5+</div>
-                <div className="text-service-meta">Years Experience</div>
+              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="text-4xl font-bold text-[#ff3131] mb-3 group-hover:scale-110 transition-transform duration-300">5+</div>
+                <div className="text-gray-200 font-medium">Years Experience</div>
               </div>
             </div>
           </div>

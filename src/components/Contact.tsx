@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
             Get In <span className="text-[#ff3131]">Touch</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to take your business to the next level? Contact us today for a free consultation 
+            Ready to take your business to the next level? Contact us today for a consultation 
             and discover how LedgerLabs can transform your financial operations.
           </p>
         </div>
@@ -197,9 +197,9 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-              <h4 className="text-xl font-bold text-[#11166c] mb-4">Free Consultation</h4>
+              <h4 className="text-xl font-bold text-[#11166c] mb-4">Consultation</h4>
               <p className="text-gray-600 mb-6">
-                Schedule a complimentary 30-minute consultation to discuss your business needs 
+                Schedule a 30-minute consultation to discuss your business needs 
                 and discover how our solutions can help you achieve your financial goals.
               </p>
               <button className="w-full bg-[#11166c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0f1360] transition-colors duration-300">
