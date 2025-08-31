@@ -169,7 +169,11 @@ const Services: React.FC = () => {
               </p>
               
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-[#ff3131] to-[#e62929] text-white px-8 py-4 rounded-xl font-semibold hover:from-[#e62929] hover:to-[#d12121] transition-all duration-300 shadow-lg hover:shadow-[#ff3131]/50 transform hover:scale-105 border border-white/20 hover:border-white/40 flex items-center justify-center">
+                <button
+                  type="button"
+                  onClick={() => navigate('/contact')}
+                  className="bg-gradient-to-r from-[#ff3131] to-[#e62929] text-white px-8 py-4 rounded-xl font-semibold hover:from-[#e62929] hover:to-[#d12121] transition-all duration-300 shadow-lg hover:shadow-[#ff3131]/50 transform hover:scale-105 border border-white/20 hover:border-white/40 flex items-center justify-center"
+                >
                   Schedule Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
@@ -453,7 +457,11 @@ const Services: React.FC = () => {
               Join hundreds of successful businesses who trust Ledgerlabs with their financial intelligence and growth strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-[#ff3131] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-white/20 transform hover:scale-105 flex items-center justify-center">
+              <button
+                type="button"
+                onClick={() => navigate('/contact')}
+                className="bg-white text-[#ff3131] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-white/20 transform hover:scale-105 flex items-center justify-center"
+              >
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>

@@ -41,9 +41,11 @@ const Header: React.FC = () => {
                   alt="Ledgerlabs logo" 
                   className="h-10 w-10 mr-3"
                 />
-                <span className="company-name text-[var(--primary-blue)]">
-                  LEDGER<span >LABS</span>
-                  <div >& ANALYTICS</div>
+                <span className="company-name inline-flex items-center text-[var(--primary-blue)] min-w-0">
+                  <span className="flex items-center gap-1 truncate md:whitespace-nowrap whitespace-normal text-base md:text-xl font-semibold">
+                    LEDGER<span className="ml-1">LABS</span>
+                    <span className="ml-2">&amp; ANALYTICS</span>
+                  </span>
                 </span>
               </div>
             </Link>
