@@ -29,17 +29,20 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[var(--primary-blue)] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-slate-950 text-slate-300 border-t border-white/10 relative overflow-hidden">
+      {/* Decorative gradient glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h3 className="text-3xl font-bold">
-                LEDGERLABS <span className="text-[var(--accent-red)]">&</span> ANALYTICS
+              <h3 className="text-3xl font-bold text-white tracking-tight">
+                LEDGER<span className="text-[var(--accent-red)]">LABS</span>
               </h3>
-              <p className="text-blue-200 mt-4 leading-relaxed">
-                Empowering SMEs through cutting-edge <span className="text-[var(--accent-red)] font-semibold">financial intelligence</span>, 
+              <p className="text-slate-400 mt-6 leading-relaxed max-w-sm">
+                Empowering SMEs through cutting-edge <strong className="text-white font-medium">financial intelligence</strong>,
                 transforming data into prosperity with innovative bookkeeping and analytics solutions.
               </p>
             </div>
@@ -47,27 +50,27 @@ const Footer: React.FC = () => {
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[var(--accent-red)] flex-shrink-0" />
-                <button 
+                <button
                   onClick={handlePhoneClick}
-                  className="text-blue-100 hover:text-white transition-colors cursor-pointer"
+                  className="text-slate-400 hover:text-white transition-colors cursor-pointer"
                 >
                   Pranesh: 076 772 4668
                 </button>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[var(--accent-red)] flex-shrink-0" />
-                <button 
+                <button
                   onClick={() => window.open('https://wa.me/94766781838', '_blank')}
-                  className="text-blue-100 hover:text-white transition-colors cursor-pointer"
+                  className="text-slate-400 hover:text-white transition-colors cursor-pointer"
                 >
                   Thomas: 0766 78 18 38
                 </button>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[var(--accent-red)] flex-shrink-0" />
-                <a 
-                  href="mailto:ledgerlabsanalytics@gmail.com" 
-                  className="text-blue-100 hover:text-white transition-colors"
+                <a
+                  href="mailto:ledgerlabsanalytics@gmail.com"
+                  className="text-slate-400 hover:text-white transition-colors"
                 >
                   ledgerlabsanalytics@gmail.com
                 </a>
@@ -80,9 +83,8 @@ const Footer: React.FC = () => {
                   key={index}
                   href={social.href}
                   aria-label={`${social.label}${social.placeholder ? ' (Coming Soon)' : ''}`}
-                  className={`w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-[var(--accent-red)] transition-colors duration-300 ${
-                    social.placeholder ? 'opacity-50 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-10 h-10 bg-slate-800/50 rounded-full flex items-center justify-center hover:bg-[var(--accent-red)] hover:text-white transition-all duration-300 ring-1 ring-white/10 ${social.placeholder ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
                   onClick={social.placeholder ? (e) => e.preventDefault() : undefined}
                   title={social.placeholder ? 'Coming Soon' : social.label}
                 >
@@ -94,13 +96,13 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-bold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-4">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.path}
-                    className="text-blue-200 hover:text-[var(--accent-red)] transition-colors duration-300 flex items-center group"
+                    className="text-slate-400 hover:text-[var(--accent-red)] transition-colors duration-300 flex items-center group"
                   >
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
                       {link.name}
@@ -113,37 +115,37 @@ const Footer: React.FC = () => {
 
           {/* Newsletter/CTA */}
           <div>
-            <h4 className="text-xl font-bold mb-6">Stay Connected</h4>
-            <p className="text-blue-200 mb-6">
-              Subscribe to our newsletter for the latest insights on financial intelligence and business growth.
+            <h4 className="text-lg font-bold text-white mb-6">Stay Connected</h4>
+            <p className="text-slate-400 mb-6">
+              Subscribe to our newsletter for the latest insights on financial intelligence.
             </p>
             <div className="space-y-4">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-lg bg-blue-800 border border-blue-600 text-white placeholder-blue-300 focus:ring-2 focus:ring-[var(--accent-red)] focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:ring-2 focus:ring-[var(--accent-red)] focus:border-transparent transition-all duration-300"
               />
-              <button className="w-full bg-[var(--accent-red)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors duration-300">
+              <button className="w-full bg-[var(--accent-red)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors duration-300 shadow-[0_0_15px_rgba(255,49,49,0.3)] hover:shadow-[0_0_25px_rgba(255,49,49,0.5)]">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-blue-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-blue-200 mb-4 md:mb-0">
+        <div className="border-t border-white/10 mt-16 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+            <div className="mb-4 md:mb-0">
               <p>&copy; {currentYear} Ledgerlabs. All rights reserved.</p>
             </div>
-            
-            <div className="flex space-x-6 text-blue-200 text-sm">
-              <a href="#" className="hover:text-[var(--accent-red)] transition-colors duration-300">
+
+            <div className="flex space-x-6">
+              <a href="#" className="hover:text-white transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-[var(--accent-red)] transition-colors duration-300">
+              <a href="#" className="hover:text-white transition-colors duration-300">
                 Terms of Service
               </a>
-              <a href="#" className="hover:text-[var(--accent-red)] transition-colors duration-300">
+              <a href="#" className="hover:text-white transition-colors duration-300">
                 Cookie Policy
               </a>
             </div>

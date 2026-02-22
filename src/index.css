@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Design Tokens - Original Theme */
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-glass;
+  }
+  .glass-dark {
+    @apply bg-slate-900/40 backdrop-blur-xl border border-white/10 shadow-premium;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--primary-blue)] to-[var(--accent-red)];
+  }
+}/* Design Tokens - Original Theme */
 :root {
   --primary-blue: #11166c;
   --accent-red: #ff3131;
@@ -18,6 +30,9 @@
 body {
   background-color: var(--background-white);
   color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Accent highlighting */
